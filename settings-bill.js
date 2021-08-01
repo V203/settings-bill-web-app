@@ -144,8 +144,8 @@ module.exports =  function billWithSettings() {
     function getSettings
     () {
         return {
-            smsTotal,
-            callTotal,
+            call,
+            sms,
             warn,
             crit
         }
