@@ -1,9 +1,10 @@
 
 module.exports =  function billWithSettings() {
-    let call = 0;
+   let moment  = require("moment")
+    let call ;
     let callTotal = 0;
 
-    let sms = 0;
+    let sms;
     let smsTotal = 0;
 
     let total = 0;
@@ -12,6 +13,7 @@ module.exports =  function billWithSettings() {
     let warn ;
     let crit ;
     let actionList = [];
+    let date_ = new Date()
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 
     function setCall( call_) {
@@ -189,7 +191,7 @@ module.exports =  function billWithSettings() {
         actionList.push({
             type: action,
             cost,
-            timestamp:new Date()
+            timestamp: moment(date_).fromNow()
         });
     }
     function getTotal(type) {

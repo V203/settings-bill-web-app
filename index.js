@@ -5,6 +5,9 @@ const SettingsBill = require("./settings-bill");
 const app = express();
 const moment = require("moment")
 const now = moment();
+const time_ =  {d :now.fromNow()};
+
+
 
 const settingsBill = SettingsBill();
 app.set('view engine', 'handlebars');
@@ -29,7 +32,7 @@ app.get("/", function (req, res) {
     }
     
     );
-    console.log(req.body.call + "<-- call  + callCost -->" + req.body.callCost)
+    
 });
 
 app.post("/settings", (req, res) => {
@@ -67,5 +70,7 @@ app.get("/actions/:actionType", function (req, res) {
 });
 
 app.listen(PORT, () => {
-    console.log("Listening at PORT: " + PORT + " at " + now.from(new Date()).big());
+    console.log("Listening at PORT: " + PORT);
+    
+    
 })
