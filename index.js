@@ -16,7 +16,7 @@ app.engine('handlebars', exphbs({ partialsDir: "./views/partials", viewPath: './
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static("public/css"));
 
 const PORT = process.env.PORT || 3011;
 
