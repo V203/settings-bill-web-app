@@ -44,7 +44,7 @@ app.post("/settings", (req, res) => {
         crit: req.body.criticalLevel,
 
     });
-
+// 
 
     res.redirect("/");
 });
