@@ -1,6 +1,7 @@
 
 module.exports =  function billWithSettings() {
-   let moment  = require("moment")
+ let  moment = require("moment")
+//    console.log(typeof moment()+" "+moment())
     let call ;
     let callTotal = 0;
 
@@ -191,7 +192,7 @@ module.exports =  function billWithSettings() {
         actionList.push({
             type: action,
             cost,
-            timestamp: moment(date_).fromNow()
+            timestamp: moment().fromNow()
         });
     }
     function getTotal(type) {
